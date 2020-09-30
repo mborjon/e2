@@ -1,4 +1,4 @@
-!<!doctype html>
+<!doctype html>
 <html lang='en'>
 <head><title>Practice Application</title>
     <meta charset='utf-8'>

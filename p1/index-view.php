@@ -7,7 +7,8 @@
 </head>
 
 <body>
-    <h1>Project 1</h1>
+    <h1>Dice Roll Simulator</h1>
+
     <h2>Mechanics</h2>
     <ul>
         <li>There is one pair of dice, each die has 6 sides, numbered 1-6, worth 1-6 depending on side landing up.
@@ -19,6 +20,7 @@
             greater than value of die 1, Player B wins.
         </li>
     </ul>
+
     <h2>Results</h2>
     <ul>
         <li>Player A throws a <?php echo $playerAMove; ?>
