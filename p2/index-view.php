@@ -31,12 +31,14 @@
     <ul>
         <li>You chose: <?php echo $choice ?>
         </li>
-        <li>Player A throws a <?php echo $roll; ?>
+        <li>Player A throws a <?php echo $playerAMove; ?>
         </li>
-        <li>Player B throws a <?php echo $roll; ?>
+        <li>Player B throws a <?php echo $playerBMove; ?>
         </li>
         <li>
-            <?php if ($winner) { ?>
+            <?php if ($tie) { ?>
+            It's a tie.
+            <?php } elseif ($winner) { ?>
             Congratulations, you won!
             <?php } else { ?>
             Sorry, you lost, please try again.

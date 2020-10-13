@@ -2,7 +2,7 @@
 
 session_start();
 
-//should create variables $choice, $roll, $winner
+//should create variables $choice, $playerAMove, $playerBMove, $tie, $highRoller, $winner
 if (isset($_SESSION['results'])) {
     extract($_SESSION['results']);
     $haveResults = true;

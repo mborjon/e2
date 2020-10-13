@@ -10,18 +10,28 @@ $playerAMove = $moves[rand(0, 5)];
 $playerBMove = $moves[rand(0, 5)];
 
 if ($playerAMove == $playerBMove) {
-    $winner = 'neither, it is a tie';
-} elseif ($playerAMove > $playerBMove) {
-    $winner = 'Player A';
-} elseif ($playerBMove > $playerAMove) {
-    $winner = 'Player B';
+    $tie = true;
+} else {
+    if ($playerAMove > $playerBMove) {
+        $highRoller = 'Player A';
+    } else {
+        $highRoller = 'Player B';
+    }
+
+    if ($choice == $highRoller) {
+        $winner = true;
+    } else {
+        $winner = false;
+    }
 }
-///
+
 $_SESSION['results'] = [
 'choice' => $choice,
-'roll' => $playerAMove,
-'roll' => $playerBMove,
+'playerAMove' => $playerAMove,
+'playerBMove' => $playerBMove,
 'winner' => $winner,
+'highRoller' => $highRoller,
+'tie' => $tie,
 ];
 
 header('Location: index.php');
