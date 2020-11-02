@@ -4,24 +4,34 @@ session_start();
 
 $choice = $_GET['choice'];
 
-$moves = ['heads', 'tails'];
-$flip = $moves[rand(0, 1)];
+$moves = ['1', '2', '3', '4', '5', '6'];
 
-if ($choice == $flip) {
-    $winner = true;
+$playerAMove = $moves[rand(0, 5)];
+$playerBMove = $moves[rand(0, 5)];
+
+if ($playerAMove == $playerBMove) {
+    $tie = true;
 } else {
-    $winner = false;
+    if ($playerAMove > $playerBMove) {
+        $highRoller = 'Player A';
+    } else {
+        $highRoller = 'Player B';
+    }
+
+    if ($choice == $highRoller) {
+        $winner = true;
+    } else {
+        $winner = false;
+    }
 }
 
 $_SESSION['results'] = [
 'choice' => $choice,
-'flip' => $flip,
+'playerAMove' => $playerAMove,
+'playerBMove' => $playerBMove,
 'winner' => $winner,
+'highRoller' => $highRoller,
+'tie' => $tie,
 ];
 
 header('Location: index.php');
-// You picked: heads
-// The coin landed on: heads
-// You won the toss! :)
-
-//require 'index-view.php';

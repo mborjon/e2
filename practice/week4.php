@@ -173,6 +173,10 @@ if ($player1Choice == $flip) {
 // then set the winner to be Player A
 // Otherwise set the winner to be Player B
 
+//week 7 pt. 4 shorter example
+
+
+
 
 // if ($playerA == $coinFlip) {
 //     $winner = 'Player A';
@@ -187,13 +191,13 @@ if ($player1Choice == $flip) {
 
 // Project 1 (test)
 // There is one pair of dice, each die has 6 sides, worth 1-6 depending on side landing up
-$moves = ['1', '2', '3', '4', '5', '6'];
+// $moves = ['1', '2', '3', '4', '5', '6'];
 
 // Player A casts die 1 and it randomly lands with side 1-6 up
 // Player B casts die 2 and it randomly lands with side 1-6 up
 
-$playerAMove = $moves[rand(0, 2)];
-$playerBMove = $moves[rand(0, 2)];
+// $playerAMove = $moves[rand(0, 2)];
+// $playerBMove = $moves[rand(0, 2)];
 
 // var_dump($playerAMove);
 // var_dump($playerBMove);
@@ -201,10 +205,10 @@ $playerBMove = $moves[rand(0, 2)];
 // A tie is declared if both players cast the same value
 // Otherwise: If value of die 1 is greater than value of die 2, Player A wins. If value of die 2 is greater than value of die 1, Player B wins.
 
-if ($playerAMove == $playerBMove) {
-    var_dump('Tie');
-} elseif ($playerAMove > $playerBMove) {
-    var_dump('Player A wins');
-} elseif ($playerBMove > $playerAMove) {
-    var_dump('Player B wins');
-}
+// if ($playerAMove == $playerBMove) {
+//     var_dump('Tie');
+// } elseif ($playerAMove > $playerBMove) {
+//     var_dump('Player A wins');
+// } elseif ($playerBMove > $playerAMove) {
+//     var_dump('Player B wins');
+// }
