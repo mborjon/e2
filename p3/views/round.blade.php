@@ -10,7 +10,7 @@ Round Details
 
 <ul>
     <li>Choice: {{ $round['choice'] }}</li>
-    <li>Results: {{ $round['winner'] == 1 ? 'You won!' : 'Sorry, you lost. Please try again' }}</li>
+    <li>Results: {{ $round['winner'] == 1 ? 'You won' : 'You lost' }}</li>
     <li>Time: {{ $round['time'] }}</li>
 </ul>
 

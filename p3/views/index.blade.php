@@ -44,16 +44,18 @@ Dice Roll
 
 @if($results)
 
-<p>You chose: {{ $results['choice']}}</p>
-@endif
+<div class='{{ $results['winner'] ? 'won' : 'lost' }}'>
+    <p>You chose: {{ $results['choice']}}</p>
 
-@if($results['Tie'])
+    @if($results['Tie'])
+    It’s a tie.
+    @elseif($results['winner'])
+    Congratulations, you won!
+    @else
+    Sorry, you lost, please try again.
+    @endif
+</div>
 
-It's a tie.
-@elseif($results['winner'])
-Congratulations, you won!
-@else
-Sorry, you lost, please try again.
 @endif
 
 <p>

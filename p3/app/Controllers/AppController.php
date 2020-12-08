@@ -39,6 +39,8 @@ class AppController extends Controller
         $this->app->validate([
         'choice' => 'required'
     ]);
+
+    
         $choice = $this->app->input('choice');
         
         #Save results to the database
